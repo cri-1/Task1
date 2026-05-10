@@ -16,7 +16,7 @@ typedef struct TreeNode {
     int depth;
 } TreeNode;
 
-StockList* newL(char *n);
+StockList* newL( char *n);
 TreeNode* newT(int d);
 void add(TreeNode *node,char *n);
 void ins(TreeNode *root,char *n,double p[],int d);

@@ -3,7 +3,7 @@
 #include <string.h>
 #include "header3.h"
 
-StockList* newL(const char *n) {
+StockList* newL(char *n) {
     StockList* x=malloc(sizeof(StockList));
     if(x){ 
         strncpy(x->symbol,n,MAX_SYM); 
@@ -22,7 +22,7 @@ TreeNode* newT(int d) {
     return x;
 }
 
-void add(TreeNode *node,const char *n) {
+void add(TreeNode *node,char *n) {
     StockList* x=newL(n);
     if (!node->stocks){
         node->stocks=x;
@@ -33,7 +33,7 @@ void add(TreeNode *node,const char *n) {
     }
 }
 
-void ins(TreeNode *root,const char *n,double p[],int d){
+void ins(TreeNode *root,char *n,double p[],int d){
     TreeNode* x=root;
     int i=0;
     for (i=0;i<d-1;i++){
